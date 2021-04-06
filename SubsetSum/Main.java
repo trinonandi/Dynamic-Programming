@@ -49,10 +49,10 @@ class Solution{
 
     int currentWeight = arr[n-1];
     if(currentWeight > maxSum){
-      return table[n][maxSum] = subsetSumRecursion(maxSum, n-1);
+      return table[n][maxSum] = subsetSumMemo(maxSum, n-1);
     }
-    boolean inclusive = subsetSumRecursion(maxSum - currentWeight , n-1);
-    boolean exclusive = subsetSumRecursion(maxSum, n-1);
+    boolean inclusive = subsetSumMemo(maxSum - currentWeight , n-1);
+    boolean exclusive = subsetSumMemo(maxSum, n-1);
 
     return table[n][maxSum] = (inclusive || exclusive);
 
