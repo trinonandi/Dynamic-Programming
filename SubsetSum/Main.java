@@ -60,7 +60,6 @@ class Solution{
 
   // Bottom up Solution
   public boolean subsetSumBottomUp(int maxSum, int n){    // Time = Space O(maxSum * n)
-
     int i, j;
     for(i=0;i<=n;i++){
       for(j=0;j<=maxSum;j++){
